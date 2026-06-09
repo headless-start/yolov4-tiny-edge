@@ -1,0 +1,2 @@
+-r requirements.txt
+pycocotools>=2.0.6

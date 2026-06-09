@@ -1,7 +1,66 @@
-# Ignore virtual environments under my pwd - /home/ayush/Documents/dataaug
+# Secrets and credentials (never commit these)
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.keystore
+.netrc
+.npmrc
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*.token
+*.pat
+*_token
+*secret*
+*credential*
+secrets/
+.aws/
+.ssh/
+
+# Private notes / build briefs (keep local, never publish)
+*BRIEF*
+*brief*
+NOTES.md
+scratch/
+TODO.local*
+
+# Editor, tooling, OS cruft
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
 my_env/
 
-# Ignore dataset files
+# Pretrained model files (fetch with models/download_weights.py)
+*.weights
+models/*.cfg
+models/coco.names
+
+# Run outputs (curated artefacts are force-added)
+results/
+
+# COCO evaluation cache (fetched by src/eval_map.py)
+data/coco/
+
+# Datasets and large archives
 *.csv
 *.tfrecord
 *.h5
@@ -10,5 +69,5 @@ my_env/
 *.tar.gz
 *.tar.bz2
 
-# Ignore Jupyter Notebook checkpoints
+# Jupyter
 .ipynb_checkpoints/
