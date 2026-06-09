@@ -1,0 +1,39 @@
+{
+  "generated": "2026-06-09T07:18:23",
+  "note": "edge-simulated on host CPU restricted per profile; not a Raspberry Pi",
+  "host": {
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "cpu": "AMD Ryzen 7 7840HS with Radeon 780M Graphics",
+    "cpu_count": 16,
+    "opencv": "4.13.0"
+  },
+  "params": {
+    "image": "dog.jpg",
+    "warmup": 5,
+    "iters": 30,
+    "conf": 0.25,
+    "nms": 0.45
+  },
+  "runs": [
+    {
+      "model": "full",
+      "profile": "pi4b_320",
+      "threads": 4,
+      "input_size": 320,
+      "mean_ms": 161.76,
+      "median_ms": 159.87,
+      "p95_ms": 187.15,
+      "fps": 6.18
+    },
+    {
+      "model": "full",
+      "profile": "edge_2core",
+      "threads": 2,
+      "input_size": 256,
+      "mean_ms": 181.42,
+      "median_ms": 181.11,
+      "p95_ms": 192.45,
+      "fps": 5.51
+    }
+  ]
+}
